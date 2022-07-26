@@ -35,9 +35,16 @@ Since there are more than 60 complete genome fasta files of A. thaliana accesion
     fasta.seqs [[i]] = fasta.seqs [[i]][start:stop]
     }
     write.fasta(sequences = fasta.seqs, names = fasta.names, file.out= file.name)
-    return(file.name) }
+    return(file.name) 
 
 
 ## Step 2: Translate TE sequence to proteins using Transdecoder
+from mcsitzer/maize_genomic_ecosystem/te_genes/orfs/
+    
+      #!/bin/bash
+    TransDecoder.LongOrfs -m 450 -t /home/irh25/jacob/001Genomes/002WholeGenome/WholeTable_18.07.2022.fasta
+    TransDecoder.Predict -t /home/irh25/jacob/001Genomes/002WholeGenome/WholeTable_18.07.2022.fasta
+
+
 ## Step 3: Split proteins into gagpol-orf and athila-orf fasta files
 ## Step 4: Check proteins using BLASTALL
