@@ -5,6 +5,7 @@ Since there are more than 60 complete genome fasta files of A. thaliana accesion
 
 ## Step 2: Translate TE sequence to proteins using Transdecoder
 from mcsitzer/maize_genomic_ecosystem/te_genes/orfs/
+
 We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (athila-orf)
       
 
