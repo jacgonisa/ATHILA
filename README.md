@@ -9,5 +9,5 @@ from mcsitzer/maize_genomic_ecosystem/te_genes/orfs/
 We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (athila-orf)
       
 
-## Step 3: Split proteins into gagpol-orf and athila-orf fasta files
+## Step 3: Select ATHILAX and split proteins into gagpol-orf and athila-orf fasta files
 ## Step 4: Check proteins using BLASTALL
