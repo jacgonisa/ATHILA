@@ -1,8 +1,7 @@
 # Athila
 ## Step 1: Get TE sequences from fasta files
 Since there are more than 60 complete genome fasta files of A. thaliana accesions, coding a function to get TE sequences from fasta and paste them with an appropiate name is very necesssary:
-{
-write.fasta.athila.All <- function(file, file.name )
+{ write.fasta.athila.All <- function(file, file.name )
 {
   fasta.names <- vector(length = nrow(file), mode = "character")
   fasta.seqs <-list()
@@ -34,8 +33,7 @@ write.fasta.athila.All <- function(file, file.name )
     fasta.seqs [[i]] = fasta.seqs [[i]][start:stop]
   }
   write.fasta(sequences = fasta.seqs, names = fasta.names, file.out= file.name)
-  return(file.name)
-}
+  return(file.name) }
 
 
 ## Step 2: Translate TE sequence to proteins using Transdecoder
