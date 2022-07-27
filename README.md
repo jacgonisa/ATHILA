@@ -13,4 +13,6 @@ We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (at
 
 ## Step 3: Select ATHILAX and split proteins into gagpol-orf and athila-orf fasta files
       grep "ATHILA" file.pep > new_file
+      
 ## Step 4: Check proteins using BLASTALL
+We check for ORFs that do not align with anything (odd TEs), which means this TEs are "intruders"
