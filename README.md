@@ -15,4 +15,6 @@ We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (at
 "grep" function plays a crucial role in this step
       
 ## Step 4: Check proteins using BLASTALL
-We check for ORFs that do not align with anything (odd TEs), which means this TEs are "intruders"
+- We check for ORFs that do not align with anything (odd TEs), which means this TEs are "intruders"
+
+- Re-dot-table is useful for detecting LTRs. They are not present in these odd TEs
