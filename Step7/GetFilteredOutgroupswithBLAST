@@ -1,0 +1,7 @@
+library(seqinr)
+outgroups_gagpol = read.table ("AllOutgroupsforGagpol_blast_270722") #Table obtained from running .sh
+Outgroups = read.fasta("FinalOutgroups", seqtype="AA") #"FinalOutgroups" is the file that joins all the Outgroups families (Calypso, Gypsy, Copia, viruses, etc.) retrieved from databases#
+significant_outgroups_gagpol = outgroups_gagpol[outgroups_gagpol$V11 < 1e-02, ]
+FilteredOutgroupswithBLAST = Outgroups[unique(significant_outgroups_gagpol$V1)]
+ write.fasta(getSequence(FilteredOutgroupswithBLAST),names= getName(FilteredOutgroupswithBLAST), file.out ="FilteredOutgroupswithBLAST_280722")
+ 
