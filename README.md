@@ -9,7 +9,9 @@ from mcsitzer/maize_genomic_ecosystem/te_genes/orfs/
 longest_orfs.pep obtained
 
 We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (athila-orf)
-      
+
+  ### Step 2.1: Check Pfam to assess if p1=gagpol-orf and p2=athila-orf
+We run Pfam.sh script, from mcsitzer/maize_genomic_ecosystem/te_genes
 
 ## Step 3: Select ATHILA(X) and split proteins into gagpol-orf and athila-orf fasta files
 "grep" function plays a crucial role in this step
