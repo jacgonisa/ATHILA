@@ -6,3 +6,5 @@
 
 ## Create a table to visualize in Cytoscape
     write.table(mynonself_athila[ ,c(1,2)] , "nonself_athilaorf_athila")
+
+## We can submit this file to Transdecoder
