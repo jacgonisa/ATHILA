@@ -18,3 +18,12 @@ We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (at
 - We check for ORFs that do not align with anything (odd TEs), which means this TEs are "intruders"
 
 - Re-dot-table is useful for detecting LTRs. They are not present in these odd TEs
+- 
+## Step 5: Cytoscape Double-check
+
+
+## Step 6: Pfam motifs
+
+
+
+## Step 7: BLAST Outgroups to gag-pol and athila-orf
