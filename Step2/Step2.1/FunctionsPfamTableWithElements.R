@@ -1,13 +1,22 @@
+#This script intends to make a table of each TE components
+
+
+##Creating DataFrame
+df = data.frame("Name", "Athila-ORF", "GagProtease","Aspartylprotease", "RT", "Integrase", "Gag Protein")
+colnames(df) = df[1,]
+df = df [-1,]
+df[nrow(df)+length(unique(AllPfam$V3)), ] = NA
+df$Name = unique(AllPfam$V3)
 
  ##Assigning ATHILAORF
      
-name_list = AllPfam$V3[which(AllPfam$Concatenated[1:nrow(AllPfam)] == "ATHILA ORF-1 family  ")] 
+name_list_athilaorf = AllPfam$V3[which(AllPfam$Concatenated[1:nrow(AllPfam)] == "ATHILA ORF-1 family  ")] 
      
 assign_ATHILA = function()
  {
 for (i in 1:length(name_list))
    {
-     df[which(name_list[i] == df$Name), ]$"ATHILA-ORF" = "Y"
+     df[which(name_list_athilaorf[i] == df$Name), ]$"Athila-ORF" = "Y"
      
       }
  return(df)
@@ -57,7 +66,7 @@ assign_Aspartyl = function()
  {
 for (i in 1:length(name_list_Aspartyl))
    {
-     df[which(name_list_Aspartyl[i] == df$Name), ]$"AspartylProtease" = "Y"
+     df[which(name_list_Aspartyl[i] == df$Name), ]$"Aspartylprotease" = "Y"
      
       }
  return(df)
@@ -69,7 +78,7 @@ assign_gag = function()
  {
 for (i in 1:length(name_list_gag))
    {
-     df[which(name_list_gag[i] == df$Name), ]$"Gag" = "Y"
+     df[which(name_list_gag[i] == df$Name), ]$"GagProtein" = "Y"
      
       }
  return(df)
