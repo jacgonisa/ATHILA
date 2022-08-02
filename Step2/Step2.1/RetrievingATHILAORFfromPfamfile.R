@@ -14,6 +14,8 @@ AllPfam$V20 = NULL
 AllPfam$V21 = NULL
 AllPfam$V22 = NULL
 AllPfam$V23 = NULL
+
+write.table(AllPfam, file= "AllPfam_TableA")
  ###
 
 ## ATHILA-ORFs that also contain other motifs
