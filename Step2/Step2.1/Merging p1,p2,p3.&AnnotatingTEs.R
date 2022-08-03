@@ -23,4 +23,12 @@ Sums = rowSums(df_p1p2p3[, 2:ncol(df_p1p2p3)])
 df_p1p2p3 = cbind(df_p1p2p3, Sums)
 sorted_df_p1p2p3= df_p1p2p3[order(df_p1p2p3$Sums),]
 
-##R
+##RETRIEVING SEQUENCES
+#for Sum=0
+NoPfam_TEs= df_p1p2p3 [which(df_p1p2p3$Sums == 0) , ]
+NoPfam_TEs.fa = AllPeptides[paste(NoPfam_TEs$Name,".p1", sep="")]
+write.fasta(getSequence(NoPfam_TEs.fa),names =getName(NoPfam_TEs.fa), file.out="NoPfam_TEs.fa")
+
+#for Sum=6
+AllPfam_TEs= df_p1p2p3 [which(df_p1p2p3$Sums == 6) , ]
+AllPfam_TEs.fa = AllPeptides[paste(AllPfam_TEs$Name,".p1", sep="")]
