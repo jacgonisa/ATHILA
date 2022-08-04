@@ -3,4 +3,5 @@ GagPol_Pfam = rbind(AllPfam[AllPfam$Concatenated == "gag-polyprotein putative as
  names_GagPol = GagPol_Pfam$V3
  GagPol_proteins = AllPeptides[names_GagPol]
  ATHILA5_GagPolORF_proteins = GagPol_proteins[grep("ATHILA5",getName(GagPol_proteins))]
+##SEQUENCES ARE REPEATED, USE unique FUNCTION
  
