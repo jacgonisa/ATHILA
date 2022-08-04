@@ -29,3 +29,5 @@ We run Pfam.sh script, from mcsitzer/maize_genomic_ecosystem/te_genes
 
 
 ## Step 7: BLAST Outgroups to gag-pol and athila-orf
+
+## Step 8: Alignment GagPol-ORF and A MAFFT
