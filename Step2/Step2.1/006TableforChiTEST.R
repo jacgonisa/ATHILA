@@ -23,10 +23,55 @@ rownames(Centrophobic)= c("ATH-ORF", "GagProtease", "AspartylProtease", "RT", "I
 Centrophilic = matrix(c(SumATHORF_Centrophilic, SumGagProtease_Centrophilic, SumAspartylprotease_Centrophilic, SumRT_Centrophilic, SumIntegrase_Centrophilic, SumGagProtein_Centrophilic), ncol=1)
 TableForChiTest = cbind(Centrophobic, Centrophilic)
 
-#CHI TEST
+### CHI TEST ###
 install.packages("questionr")
 library(questionr)
 chisq.residuals(Table)
+library(questionr)
+Table = read.table("TableChiTest")
+t_Table = t(Table)
+chisq.residuals(Table)
+chisq.test(TableForChiTest)
+
+table_ATHILA5 = read.table("TableForChiTest_ATHILA5")
+t_Tableath5 = t(table_ATHILA5)
+chisq.test(table_ATHILA5)
+chisq.residuals(table_ATHILA5)
+ 
+
+table_Q1 = read.table("TableForChiTestQ1_040822")
+chisq.test(table_Q1)
+chisq.residuals(table_Q1)
+ggplot(data = table_Q1, aes(x=rownames(table_Q1), y =table_Q1$Q1_Centrophilic )) +
+  geom_bar(stat = "identity")
+
+rownames(table_Q1_Centrophilic) = rownames(table_Q1)
+df = data.frame(Centrophilia=c(rep("Centrophobic", 6),
+                              rep("Centrophilic", 6)), 
+                Pfam= rep(c("ATH-ORF", "GagProtease", 
+                            "AspartylProtease","RT","Integrase", "GagProtein"),2),
+ repeats = c( 147, 580, 554, 32, 18, 442, 69, 193, 186, 0, 0, 161) )
+ggplot(data = df, aes(x=Pfam, y = repeats, fill= Centrophilia)) +
+  geom_bar(stat = "identity", position = position_dodge())
+
+#####
+
+table_Q1 = read.table("TableForChiTestQ1_040822")
+chisq.test(table_Q1)
+chisq.residuals(table_Q1)
+
+table_Q2 = read.table("TableForChiTestQ2_040822")
+chisq.test(table_Q2)
+chisq.residuals(table_Q2)
+
+table_Q3 = read.table("TableForChiTestQ3_040822")
+chisq.test(table_Q3)
+chisq.residuals(table_Q3)
+
+table_Q4 = read.table("TableForChiTestQ4_040822")
+chisq.test(table_Q4)
+chisq.residuals(table_Q4)
+
 
 ##Let s try for ATHILA5
 df_Centrophobic_ATHILA5 =df_Centrophobic[grep("ATHILA5", df_Centrophobic$Name), ]
