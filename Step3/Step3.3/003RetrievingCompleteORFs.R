@@ -34,6 +34,7 @@ retrievep3 = function(completeORFs)
 completep1 = unlist(retrievep1(completeORFs))
 completep2 = unlist(retrievep1(completeORFs))
 completep3 = unlist(retrievep1(completeORFs))
+#unlist converts a list into a vector
 completep1p2p3 = c(completep1,completep2,completep3)
 completeORFs = AllPeptides[completep1p2p3]
 completeORFs = Filter(Negate(is.null), completeORFs)
