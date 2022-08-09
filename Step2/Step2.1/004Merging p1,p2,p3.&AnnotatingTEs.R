@@ -30,5 +30,4 @@ NoPfam_TEs.fa = AllPeptides[paste(NoPfam_TEs$Name,".p1", sep="")]
 write.fasta(getSequence(NoPfam_TEs.fa),names =getName(NoPfam_TEs.fa), file.out="NoPfam_TEs.fa")
 
 #for Sum=6
-AllPfam_TEs= df_p1p2p3 [which(df_p1p2p3$Sums == 6) , ]
-AllPfam_TEs.fa = AllPeptides[paste(AllPfam_TEs$Name,".p1", sep="")]
+#NEXT SCRIPT
