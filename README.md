@@ -20,7 +20,7 @@ We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (at
 ## Step 4: BLAST Outgroups to gag-pol and athila-orf
 This step aims to filter the selected outgroups
 
-## Step 8: Alignment GagPol-ORF and ATHILA-ORF MAFFT
+## Step 5: Alignment GagPol-ORF and ATHILA-ORF MAFFT
 
 
 ## Appendix: Check proteins using BLASTALL
