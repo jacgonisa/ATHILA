@@ -12,7 +12,7 @@ We obtained .p1 (the largest predicted protein, which is gagpol-orf) and .p2 (at
   
 ## Step 3: Identify Pfam motifs of peptides to sort them into GagPol-ORF and ATHILA-ORF
    ### Step 3.1: Run Pfam.sh script, from mcsitzer/maize_genomic_ecosystem/te_genes
-   ### Step 3.2: Select ATHILA(X) and split proteins into gagpol-orf and athila-orf fasta files
+   ### Step 3.2: Split proteins into GagPol-ORF and ATHILA-ORF, also split into ATHILA(1,2,3,4,5,...)
 "grep" function plays a crucial role in this step
    ### Step 3.3: Annotate TEs according to their number of relevant Pfam motifs
    ### Step 3.4: Chi-squared test followed by Pearson distribution to detect enrichments in any specific Pfam motif
