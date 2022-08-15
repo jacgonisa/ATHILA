@@ -44,4 +44,5 @@ row.names(GagPol_Pfam) = 1:nrow(GagPol_Pfam)
 names_GagPol = GagPol_Pfam$V3
 GagPol_proteins = AllPeptides[names_GagPol]
 GagPol_completeORFs = GagPol_proteins[GagPol_proteins%in%completeORFs]
+GagPol_completeORFs = unique(GagPol_completeORFs)
 write.fasta(getSequence(GagPol_completeORFs), getName(GagPol_completeORFs), file.out= "GagPol_completeORFs080822.fa")
